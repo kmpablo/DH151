@@ -1,0 +1,17 @@
+body {
+    font-family: 'Chivo', sans-serif;
+    background-color: black;
+    color: #DDF2EB;
+    line-height: 150%;
+}
+
+h1 {
+    text-align: center;
+}
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
