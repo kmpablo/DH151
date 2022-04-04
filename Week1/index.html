@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hello World</title>
+	<meta charset="utf-8" />
+
+	<!-- style sheets -->
+	<link rel="stylesheet" href="style.css">
+
+    <!-- leaflet -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+
+</head>
+<body>
+
+	<div class="header">
+		Map of Keona's Life
+	</div>
+	<div class="sidebar">
+		Timeline
+        <ol>
+            <li>
+                Keona's birthplace
+                <img src=https://a.cdn-hotels.com/gdcs/production127/d88/a5e3756e-e17b-4f77-a7e7-a938dec22e8d.jpg?impolicy=fcrop&w=800&h=533&q=medium>
+            
+            </li>
+           <li>
+            Keona's preschool
+            <img src=https://wordpressstorageaccount.blob.core.windows.net/wp-media/wp-content/uploads/sites/1075/2019/07/Sunrise-city.png>
+           </li>
+        </ol>
+	</div>
+	<div class="content">
+		<div id="map"></div>
+	</div>
+
+    <script>
+            var map = L.map('map').setView([26.1202, 127.7025], 17);
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
+
+    // var locations = [
+    //     ["Where Keona was born", 26.1202, 127.7025],
+    //     ["Where Keona lived toddler to preschool years", 47.5650, 122.6270]
+    // ];
+
+    // for (var i = 0; i < locations.length; i++) {
+    //     marker = new L.marker([locations[i][1]], locations[i][2]])
+    //         .bindPopup(locations[i][0])
+    //         .addTo(map);
+    // }
+
+    var marker = L.marker([26.1202, 127.7025]).addTo(map)
+            .bindPopup('Where Keona was born')
+            .openPopup();
+    var marker = L.marker([47.5650, -122.62705]).addTo(map)
+            .bindPopup('Where Keona lived toddler to preschool years')
+            .openPopup();
+    
+
+    
+    
+    </script>
+
+</body>
+</html>
