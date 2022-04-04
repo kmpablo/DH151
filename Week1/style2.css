@@ -3,6 +3,9 @@ body {
     background-color: black;
     color: #DDF2EB;
     line-height: 150%;
+    background-image: url('Space.jpeg');
+    margin-left: 2%;
+    margin-right: 2%;
 }
 
 h1 {
