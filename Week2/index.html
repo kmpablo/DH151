@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hello World</title>
+	<meta charset="utf-8" />
+
+	<!-- style sheets -->
+	<link rel="stylesheet" href="css/style.css">
+
+    <!-- leaflet -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+
+</head>
+<body>
+
+	<div class="header">
+		Map of Keona's Life
+	</div>
+	<div class="sidebar">
+		Timeline
+        <ol>
+            <li>
+                Keona's birthplace
+                <img src=https://a.cdn-hotels.com/gdcs/production127/d88/a5e3756e-e17b-4f77-a7e7-a938dec22e8d.jpg?impolicy=fcrop&w=800&h=533&q=medium>
+            
+            </li>
+           <li>
+            Keona's preschool
+            <img src=https://wordpressstorageaccount.blob.core.windows.net/wp-media/wp-content/uploads/sites/1075/2019/07/Sunrise-city.png>
+           </li>
+        </ol>
+	</div>
+	<div class="content">
+		<div id="map"></div>
+	</div>
+
+    <script>
+           let data = [
+	{
+		'title':'Okinawa',
+		'lat': 26.1202,
+		'lon': 127.7025,
+        'desc': "This is where I was born in May 2000."
+	},
+	{
+		'title':'Cali',
+		'lat': 3.4516,
+		'lon': -76.5320,
+        'desc': "This state is located in the United States, and is nicknamed the Golden State"
+	},
+	{
+		'title':'Bangkok',
+		'lat': 13.7563,
+		'lon': 100.5018,
+        'desc': "This city is located in Thailand and I have never visted this place before"
+	},
+	{
+		'title':'Tokyo',
+		'lat': 35.6762,
+		'lon': 139.6503,
+        'desc': "This city is located in Japan and is the capital"
+	},
+	{
+		'title':'LA',
+		'lat': 34.0522,
+		'lon': -118.2437,
+        'desc': "This city is located in California, United States and is where I go to university"
+	}
+]
+    </script>
+
+</body>
+</html>
