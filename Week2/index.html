@@ -15,19 +15,38 @@
 <body>
 
 	<div class="header">
-		Map of Keona's Life
+		<h1>Keona's Around the World Adventures</h1>
 	</div>
 	<div class="sidebar">
-		Timeline
+        <h2>Description</h2>
+        Since I was born, traveling has been a huge part of my life. From being born in a different country to 
+        traveling each break from school, I have grown to love traveling and seeing the world.
+        In this site, I will be presenting a small list of various locations I have been to, restricted
+        to the North American region. Follow along with my journey across the globe!
+        <br>
+        <br>
+		Where I have been: 
         <ol>
-            <li>
-                Keona's birthplace
-                <img src=https://a.cdn-hotels.com/gdcs/production127/d88/a5e3756e-e17b-4f77-a7e7-a938dec22e8d.jpg?impolicy=fcrop&w=800&h=533&q=medium>
-            
-            </li>
            <li>
-            Keona's preschool
-            <img src=https://wordpressstorageaccount.blob.core.windows.net/wp-media/wp-content/uploads/sites/1075/2019/07/Sunrise-city.png>
+                Bremerton, Washington 
+           </li>
+           <li>
+                Santa Maria, California 
+           </li>
+           <li>
+               Orlando, Florida 
+           </li>
+           <li>
+               New York City, New York
+           </li>
+           <li>
+               Washington D.C., Maryland
+           </li>
+           <li>
+               Honolulu, Hawaii
+           </li>
+           <li>
+               Las Vegas, Nevada
            </li>
         </ol>
 	</div>
@@ -36,38 +55,79 @@
 	</div>
 
     <script>
-           let data = [
-	{
-		'title':'Okinawa',
-		'lat': 26.1202,
-		'lon': 127.7025,
-        'desc': "This is where I was born in May 2000."
-	},
-	{
-		'title':'Cali',
-		'lat': 3.4516,
-		'lon': -76.5320,
-        'desc': "This state is located in the United States, and is nicknamed the Golden State"
-	},
-	{
-		'title':'Bangkok',
-		'lat': 13.7563,
-		'lon': 100.5018,
-        'desc': "This city is located in Thailand and I have never visted this place before"
-	},
-	{
-		'title':'Tokyo',
-		'lat': 35.6762,
-		'lon': 139.6503,
-        'desc': "This city is located in Japan and is the capital"
-	},
-	{
-		'title':'LA',
-		'lat': 34.0522,
-		'lon': -118.2437,
-        'desc': "This city is located in California, United States and is where I go to university"
-	}
-]
+    var map = L.map('map').setView([47.5650, -122.62705], 3);
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
+
+    let data = [
+        {
+            'title': 'Bremerton, Washington',
+            'lat': 47.5650,
+            'lon': -122.62705,
+            'desc': 'Where I lived from toddler to preschool years.',
+            'img': 'https://wordpressstorageaccount.blob.core.windows.net/wp-media/wp-content/uploads/sites/1075/2019/07/Sunrise-city.png'
+        },
+        {
+            'title': 'Santa Maria, CA',
+            'lat': 34.9530,
+            'lon': -120.4357,
+            'desc': 'Where I lived from kindergarten days to high school. The place where I lived the longest and call my hometown!',
+            'img': 'santamaria.jpeg'
+        },
+        {
+            'title': 'Orlando, Florida',
+            'lat': 28.5384,
+            'lon': -81.3789,
+            'desc': 'I visited DisneyWorld for summer break once and have wanted to go back ever since.',
+            'img': 'disneyworld.jpeg'
+        },
+        {
+            'title': 'New York City, New York',
+            'lat': 40.7128,
+            'lon': -74.0060,
+            'desc': 'I visited New York for spring break with her family. I absolutely loved the city life and how something is always happening.',
+            'img': 'nyc.jpeg'
+        },
+        {
+            'title': 'Washington D.C., Maryland',
+            'lat': 38.9072,
+            'lon': -77.0369,
+            'desc': 'When I went to D.C., I visited so many museums and monuments. It was so cold and windy, my umbrella even folded itself upside down because of the wind!',
+            'img': 'dc.jpg'
+        },
+        {
+            'title': 'Honolulu, Hawaii',
+            'lat': 21.3069,
+            'lon': -157.8583,
+            'desc': 'My family likes to visit Hawaii every few years for summer vacation. I once went ziplining and surfing in Hawaii and have visited almost every island!',
+            'img': 'hawaii.jpeg'
+        },
+        {
+            'title': 'Las Vegas, Nevada',
+            'lat': 36.1699,
+            'lon': -115.1398,
+            'desc': 'I have visited Vegas a couple of times as a kid, but could only really do anything there when I finally got to college.',
+            'img': 'vegas.jpeg'
+        }
+    ]
+
+    data.forEach(function(item){
+        marker = new L.marker([item.lat, item.lon]).addTo(map)
+            .bindPopup('<h2>' + item.title+ '</h2>' + '<img src=' + item.img + '>' + '<br>' + '<div class = text>' + item.desc + '</div>')
+            .openPopup()
+    });
+    
+
+    // var marker = L.marker([26.1202, 127.7025]).addTo(map)
+    //         .bindPopup('Where Keona was born')
+    // var marker2 = L.marker([47.5650, -122.62705]).addTo(map)
+    //         .bindPopup('Where Keona lived toddler to preschool years')
+    
+
+    
+    
     </script>
 
 </body>
