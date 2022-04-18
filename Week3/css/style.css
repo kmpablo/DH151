@@ -1,0 +1,31 @@
+#intro
+{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 50px;
+    color: #DDF2EB;
+    text-align: center;
+}
+
+body {
+    background-color: black;
+}
+
+.btn {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    background-image: url('https://media.sketchfab.com/models/69372c5dd5e54b8ebf1a5fc02a90748f/thumbnails/bffe9aa880f7443b9bab5e0e3b87fa13/1024x576.jpeg');
+    background-position: center;
+    width: 450px;
+    height: 450px;;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.earth:hover {
+    background-color: #09B5FF;
+    background-size: 200%;
+}
+
+
+
